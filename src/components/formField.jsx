@@ -1,9 +1,9 @@
-export default function FormField({ fieldInfo }) {
+export default function FormField({ fieldInfo, onChange }) {
   return (
     <>
       <label>
-        {fieldInfo.name + " "}
-        <input type={fieldInfo.type}></input>
+        {fieldInfo.label + " "}
+        <input name={fieldInfo.name} type={fieldInfo.type} value={fieldInfo.value} onChange={onChange}></input>
       </label>
     </>
   );
