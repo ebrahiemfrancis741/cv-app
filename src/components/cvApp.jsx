@@ -125,11 +125,11 @@ export default function CvApp() {
           {isEditing ? (
             <>
               <button disabled>Editing</button>
-              <button>Submit</button>
+              <button onClick={() => {setIsEditing(false)}}>Submit</button>
             </>
           ) : (
             <>
-              <button>Editing</button>
+              <button onClick={() => {setIsEditing(true)}}>Editing</button>
               <button disabled>Submit</button>
             </>
           )}
