@@ -82,3 +82,11 @@ div.button-container {
     }
   }
 }
+
+section{
+  h2{
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: black;
+  }
+}
