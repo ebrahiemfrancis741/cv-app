@@ -27,11 +27,10 @@ export default function CvApp() {
 
   return (
     <>
+      <header>
+        <h1>CV app</h1>
+      </header>
       <main>
-        <header>
-          <h1>CV app</h1>
-        </header>
-
         {isEditing && (
           <form>
             <FormSection
@@ -160,7 +159,7 @@ export default function CvApp() {
             </p>
           </section>
         )}
-        <div>
+        <div className="button-container">
           {isEditing ? (
             <>
               <button disabled>Editing</button>
