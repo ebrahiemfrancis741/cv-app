@@ -120,16 +120,67 @@ export default function CvApp() {
             ></FormSection>
           </form>
         )}
-        {!isEditing && <></>}
+        {!isEditing && (
+          <section>
+            <h2>General Information</h2>
+            <p>
+              <b>Full name:</b> {formData.fullName}
+            </p>
+            <p>
+              <b>Email:</b> {formData.email}
+            </p>
+            <p>
+              <b>Phone number</b>: {formData.number}
+            </p>
+            <h2>Educational Experience</h2>
+            <p>
+              <b>School name:</b> {formData.schoolName}
+            </p>
+            <p>
+              <b>Title of study:</b> {formData.titleOfStudy}
+            </p>
+            <p>
+              <b>Date of study:</b> {formData.dateOfStudy}
+            </p>
+            <h2>Practical Experience</h2>
+            <p>
+              <b>Company name:</b> {formData.companyName}
+            </p>
+            <p>
+              <b>Position title:</b> {formData.positionTitle}
+            </p>
+            <p>
+              <b>Main responsibility:</b> {formData.responsibilities}
+            </p>
+            <p>
+              <b>Worked from:</b> {formData.workedFrom}
+            </p>
+            <p>
+              <b>Worked until:</b> {formData.workedUntil}
+            </p>
+          </section>
+        )}
         <div>
           {isEditing ? (
             <>
               <button disabled>Editing</button>
-              <button onClick={() => {setIsEditing(false)}}>Submit</button>
+              <button
+                onClick={() => {
+                  setIsEditing(false);
+                }}
+              >
+                Submit
+              </button>
             </>
           ) : (
             <>
-              <button onClick={() => {setIsEditing(true)}}>Editing</button>
+              <button
+                onClick={() => {
+                  setIsEditing(true);
+                }}
+              >
+                Editing
+              </button>
               <button disabled>Submit</button>
             </>
           )}
